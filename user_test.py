@@ -51,5 +51,15 @@ class TestUser(unittest.TestCase):
             self.new_user.delete_user()# Deleting a user object
             self.assertEqual(len(User.user_list),1)# to check if the length of our user_list is equal to the number of users saved.
 
+
+#To check if we can find the username entered using the account name and display this.
+def test_find_username_by_account(self):
+        self.new_users.save_user()
+        test_user = User("Test","user","0711223344")
+        test_user.save_user()
+        found_user = User.find_by_firstName("Test")
+        self.assertEqual(found_user.username,test_user.username)
+
+
 if __name__ == '__main__':
     unittest.main()
