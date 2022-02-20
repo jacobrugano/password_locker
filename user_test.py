@@ -45,7 +45,7 @@ class TestUser(unittest.TestCase):
 
 #To test if a user can delete his user details from the user_list
     def test_delete_user(self):
-            self.new_user.save_user()  # saving the new user
+            self.new_user.save_user()  # saving the new user details
             test_user = User("Test","user","0712345678")  # code block for the extra new user details
             test_user.save_user()
             self.new_user.delete_user()# Deleting a user object
