@@ -25,12 +25,20 @@ class TestUser(unittest.TestCase):
 
 #code block to test if the user details has been added using the length method.
     def test_save_user(self):
-        '''
-        test_save_user test case to test if the user object is saved into the user list
-        '''
         self.new_user.save_user() # saving the new user
         self.assertEqual(len(User.user_list),1) #We test this using the length method.
 
+
+
+
+
+
+#   test_save_multiple_users to test if we can save multiple users in our users list.
+    def test_save_multiple_users(self):
+            self.new_user.save_user()  
+            test_user = User("Test","user","3456788") # code block for the extra new user
+            test_user.save_user() # saving the extra new user
+            self.assertEqual(len(User.user_list),2) # to check if the length of our users list is equal to the number of users saved.
 
 if __name__ == '__main__':
     unittest.main()
