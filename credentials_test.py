@@ -39,20 +39,20 @@ class TestCredential(unittest.TestCase):
 #   test_save_multiple_credential' details to test if we can save multiple credentials in our credentials list.
     def test_save_multiple_credentials(self):
             self.new_credential.save_credential()  
-            test_credential = Credential("Jacob","3456788") # code block for the extra new user details
+            test_credential = Credential("Jacob","3456788") # code block for the extra new credentials details
             test_credential.save_credential() # saving the extra new credential details
             self.assertEqual(len(Credential.credential_list),2) # to check if the length of our credential_list is equal to the number of users saved.
 
-# #To test if a user can delete his user details from the user_list
-#     def test_delete_user(self):
-#             self.new_user.save_user()  # saving the new user details
-#             test_user = User("Test","user","0712345678")  # code block for the extra new user details
-#             test_user.save_user()
-#             self.new_user.delete_user()# Deleting a user object
-#             self.assertEqual(len(User.user_list),1)# to check if the length of our user_list is equal to the number of users saved.
+#To test if a credential can delete his credential details from the credential_list
+    def test_delete_credential(self):
+            self.new_credential.save_credential()  # saving the new credential details
+            test_credential = Credential("Jacob","3456788")  # code block for the extra new credential details
+            test_credential.save_credential()
+            self.new_credential.delete_credential()# Deleting a credential object
+            self.assertEqual(len(Credential.credential_list),1)# to check if the length of our credential_list is equal to the number of credentials saved.
 
 
-#To check if we can find the username entered using the account name and display this.
+# To check if we can find the username entered using the account name and display this.
 # def test_find_username_by_account(self):
 #         self.new_usser.save_user()
 #         test_user = User("Test","user","0711223344") # new user details
