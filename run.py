@@ -6,14 +6,14 @@ def create_user(username,password):
     '''
     Function to create a new user account
     '''
-    new_user = User(username,password)
-    return new_user
+    new_user = User(username,password) #To create a new user
+    return new_user        #To return the new User
 
-# def save_contacts(contact):
-#     '''
-#     Function to save contact
-#     '''
-#     contact.save_contact()
+def save_users(user):
+    '''
+    Function to save the user account
+    '''
+    user.save_user()
 
 # def del_contact(contact):
 #     '''
