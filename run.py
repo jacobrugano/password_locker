@@ -18,11 +18,12 @@ def save_users(user):
     '''
     user.save_user()
 
-# def save_usercredentials(credentials):
-#     '''
-#     Function to save the user usercredentials
-#     '''
-#     credentials.save_usercredentials()
+#Saving the credentials from the Credentials class
+def save_usercredentials(credentials):
+    '''
+    Function to save the user usercredentials
+    '''
+    credentials.save_usercredentials()
 
 # def del_user(user):
 #     '''
