@@ -36,12 +36,12 @@ class TestCredential(unittest.TestCase):
              empty list. This helps us get accurate test results every time a new test case'''
 
              
-# #   test_save_multiple_user' details to test if we can save multiple users in our users list.
-#     def test_save_multiple_users(self):
-#             self.new_user.save_user()  
-#             test_user = User("Test","user","3456788") # code block for the extra new user details
-#             test_user.save_user() # saving the extra new user details
-#             self.assertEqual(len(User.user_list),2) # to check if the length of our user_list is equal to the number of users saved.
+#   test_save_multiple_credential' details to test if we can save multiple credentials in our credentials list.
+    def test_save_multiple_credentials(self):
+            self.new_credential.save_credential()  
+            test_credential = Credential("Jacob","3456788") # code block for the extra new user details
+            test_credential.save_credential() # saving the extra new credential details
+            self.assertEqual(len(Credential.credential_list),2) # to check if the length of our credential_list is equal to the number of users saved.
 
 # #To test if a user can delete his user details from the user_list
 #     def test_delete_user(self):
