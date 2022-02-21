@@ -23,10 +23,10 @@ class TestCredential(unittest.TestCase):
               The first argument is the expected result and the second argument is the result that is actually gotten.
              This code block is to check if the name and description of our new object is what we actually inputted. '''
 
-# #code block to test if the user details has been added using the length method.
-#     def test_save_user(self):
-#         self.new_user.save_user() # saving the new user
-#         self.assertEqual(len(User.user_list),1) #We test this using the length method.
+#code block to test if the credential details has been added using the length method.
+    def test_save_credential(self):
+        self.new_credential.save_credential() # saving the new credential
+        self.assertEqual(len(Credential.credential_list),1) #We test this using the length method.
 
 
 # # tearDown method that does clean up after each test case has run. Just like the setUp() method the tearDown() method executes a set of instructions after every test.
