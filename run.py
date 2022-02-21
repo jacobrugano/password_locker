@@ -25,11 +25,12 @@ def save_usercredentials(credentials):
     '''
     credentials.save_usercredentials()
 
-# def del_user(user):
-#     '''
-#     Function to delete user details
-#     '''
-#     user.delete_user()
+# Deleting a user account:
+def del_useraccount(user):
+    '''
+    Function to delete user details
+    '''
+    user.delete_useraccount()
 
 # def find_account(account):
 #     '''
@@ -119,4 +120,4 @@ def save_usercredentials(credentials):
 #                     else:
 #                             print("I really didn't get that. Please use the short codes")
 
-main()
+# main()
