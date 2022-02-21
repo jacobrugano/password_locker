@@ -53,13 +53,13 @@ class TestUser(unittest.TestCase):
 
 
 #To check if we can find the username entered using the account name and display this.
-def test_find_username_by_account(self):
-        self.new_usser.save_user()
-        test_user = User("Test","user","0711223344") # new user details
-        test_user.save_user()
-        found_user = User.find_by_username("0711223344")
+# def test_find_username_by_account(self):
+#         self.new_usser.save_user()
+#         test_user = User("Test","user","0711223344") # new user details
+#         test_user.save_user()
+#         found_user = User.find_by_username("0711223344")
 
-        self.assertEqual(found_user.username,test_user.username)
+#         self.assertEqual(found_user.username,test_user.username)
 
 
 

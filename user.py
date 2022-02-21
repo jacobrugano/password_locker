@@ -15,3 +15,4 @@ class User:   #Class that generates new instances of contacts
 #We create a delete_user method that uses the remove() method to delete the user object from the user_list.
     def delete_user(self):
          User.user_list.remove(self)
+
