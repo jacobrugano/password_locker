@@ -1,4 +1,4 @@
-class Credentials:   #Class that generates new instances of credentials
+class Credential:   #Class that generates new instances of credentials
     
     credential_list = [] #credential_list is a Class variables(variables that belong to the entire class and can be  accessed by all instances of the class. This user_list var will be used to store our created user objects
     def __init__(self,username,password):
@@ -13,4 +13,4 @@ class Credentials:   #Class that generates new instances of credentials
 
 #We create a delete_credential method that uses the remove() method to delete the credential object from the credential_list.
     def delete_credential(self):
-         Credential.credential_list.remove(self)
+        Credential.credential_list.remove(self)
