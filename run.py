@@ -78,7 +78,7 @@ def main():
         print(f"Welcome {first_name} {last_name} of number {number}. Ensure you use {password} as your password to sign up to continue")
         print('\n')
         print("*" * 50)
-        print ("Reply with: cc -to Create logins for this Passlocker Account(Recommended), ca - To create new logins for your sub-accounts in the PassLocker account such as Instragram, EX -to Exit the application, ca - create a new credentials account, se - to store existing credentials in the application")
+        print ("Reply with: cc -to Create logins for this Passlocker Account(Recommended), ca - To create new logins for your sub-accounts in the PassLocker account such as Instragram, EX -to Exit the application, ca - create a new credentials account, se - to store existing credentials in the application,  to view your various account credentials and their passwords in the application")
         print("*" * 50)
 
         while True:
@@ -100,7 +100,7 @@ def main():
                 print("type     ca      to proceed to the login details of your sub-accounts such as Instagram")
 
             elif short_code == 'ca':
-                print ("If you had not logged in to account eg Instagram, Enter the details you will be using:")
+                print ("If you had not logged in to account eg Instagram, Enter the details you wish to be using in the new application:")
                 print("Username:")
                 # user_name = input()
                 print("Password:")
@@ -126,6 +126,8 @@ def main():
                         print("*" * 50)
                         print("Thank you for choosing this option. You will proceed to storing your logins in the application")
                         print("*" * 50)
+                        print("NOTE THAT: This are the same details you will be using in the new application")
+                        print("*" * 50)
                         print("Username:")
                         user_name = input()
                         print("Password:")
@@ -137,7 +139,24 @@ def main():
                         
                         save_credential(create_credential(user_name,pass_word,phone,email))   
                         print(f"SAVED SUCCESSFULLY! This are the details that will be stored in the application: {user_name} {pass_word} {phone} {email}")
-       
+                        print("*" * 50)
+                        print("Enter    dc    to view your various account credentials and their passwords in the application")
+         
+            elif short_code == 'dc':
+
+                            if display_credential():
+                                    print("Here is a list of all your your various account credentials and their passwords in the application")
+
+                                    for credential in display_credential():
+                                            print(f"{credential.user_name} {credential.pass_word} .....{credential.number}  {credential.email}")
+                                    
+                                    print("*" * 50)
+                            else:
+                                    print("*" * 50)
+                                    print("You dont seem to have all account credentials and their passwords to enable saving. Check if you inputted all the fields appropriately")
+                                    print("*" * 50)
+
+
         #  save_contacts(create_contact(f_name,l_name,p_number,e_address)) # create and save new contact.
                     #         print ('\n')
                     #         print(f"New Contact {f_name} {l_name} created")
@@ -216,9 +235,9 @@ def main():
 main()  
 
 # create a password locker account with my details, a login username and password.///DONE
-# if I have not yet signed up for Instagram, I want to create new account credentials in the application
-# to store my already existing twitter username and password in the application.  ///Store function
-# have the option of putting in a password that I want to use for the new credential account
-#  instead of having the application generate a password for me
+# if I have not yet signed up for Instagram, I want to create new account credentials in the application///DONE
+# to store my already existing twitter username and password in the application.  ///DONE
+# have the option of putting in a password that I want to use for the new credential account //DONE
+#  instead of having the application generate a password for me////DONE
 # to view my various account credentials and their passwords in the application /////display_contacts():
 # to delete a credentials account that I no longer need in the application ////delete function
