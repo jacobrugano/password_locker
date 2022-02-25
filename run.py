@@ -44,3 +44,13 @@ def display_credential():
     Function that returns all the saved contacts
     '''
     return Credential.display_credential()
+
+def main():
+        print("Hello!! Welcome to Password Locker! Kindly enter your name to proceed:..")
+        user_name = input()
+
+        print(f"Hello {user_name}. Sign up to continue")
+        print('\n')
+
+   
+main()
