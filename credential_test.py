@@ -72,5 +72,18 @@ def test_credential_exists(self):     #//////////////////////
         credential_exists = Credential.credential_exist("3456788")
         self.assertTrue(credential_exists)
 
+
+# Test to check if we receive the list of the saved credentials.
+def test_display_all_credentials(self):    #//////////////////////
+        '''
+        method that returns a list of all credentials saved
+        '''
+
+        self.assertEqual(Credential.display_credentials(),Credential.credential_list)
+
+
+
+
+
 if __name__ == '__main__':
     unittest.main()
