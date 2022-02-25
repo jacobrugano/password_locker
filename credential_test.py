@@ -1,5 +1,5 @@
 import unittest # Importing the unittest module
-from credentials import Credential # Importing the user class
+from credential import Credential # Importing the user class
 
 class TestCredential(unittest.TestCase):
     '''
@@ -52,8 +52,8 @@ class TestCredential(unittest.TestCase):
             self.assertEqual(len(Credential.credential_list),1)# to check if the length of our credential_list is equal to the number of credentials saved.
 
 
-# To check if we can find a user object entered using the user name and display this.
-def test_find_credential_by_username(self):   #///
+# To check if we can find a credentials entered using the user name and display this.
+def test_find_credential_by_username(self):   #//////////////////////
         self.new_credential.save_credential()
         test_credential = Credential("Jacob","3456788") # new user details
         test_credential.save_credential()
@@ -61,7 +61,16 @@ def test_find_credential_by_username(self):   #///
 
         self.assertEqual(found_credential.username,test_credential.username)
 
-
+#Test to check if the credentials actually exists.
+def test_credential_exists(self):     #//////////////////////
+        '''
+        test to check if we can return a Boolean  if we cannot find the credentials.
+        '''
+        self.new_credential.save_credential()
+        test_credential = Credential("Jacob","3456788") # new credential
+        test_credential.save_credential()
+        credential_exists = Credential.credential_exist("3456788")
+        self.assertTrue(credential_exists)
 
 if __name__ == '__main__':
     unittest.main()

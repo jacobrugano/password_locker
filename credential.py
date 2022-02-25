@@ -14,3 +14,17 @@ class Credential:   #Class that generates new instances of credentials
 #We create a delete_credential method that uses the remove() method to delete the credential object from the credential_list.
     def delete_credential(self):
         Credential.credential_list.remove(self)
+
+
+    @classmethod #///////////////
+    def find_by_username(cls,username):
+        '''
+        Method that takes in the username and returns a username that matches that name.
+        Args:
+            number: username to search for
+        Returns :
+            Credentials of person that matches the username.
+        '''
+        for credential in cls.credential_list:
+            if credential.username == username:
+                return credential
