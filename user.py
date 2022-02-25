@@ -16,3 +16,17 @@ class User:   #Class that generates new instances of contacts
     def delete_user(self):
          User.user_list.remove(self)
 
+    @classmethod
+    def find_by_first_name(cls,first_name):
+        '''
+        Method that takes in a number and returns a contact that matches that number.
+
+        Args:
+            number: Phone number to search for
+        Returns :
+            Contact of person that matches the number.
+        '''
+
+        for first_name in cls.user_list:
+            if first_name.first_name == first_name:
+                return first_name
