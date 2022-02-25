@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.6
 
+from traceback import print_list
 from credential import Credential
 from user import User
 
@@ -70,24 +71,32 @@ def main():
         print("To proceed, enter your SECOND name:..")
         last_name = input()
         print("*" * 50)
-        print(f"Hello {first_name} {last_name}. Sign up to continue")
+        print("Enter your phone number:..")
+        number = input()
+        print("Enter a password of your  choice:")
+        password = input()
+        print(f"Welcome {first_name} {last_name} of number {number}. Ensure you use {password} as your password to sign up to continue")
         print('\n')
         print("*" * 50)
-        print ("Reply with capital: CC -to sign/Create an Account, EX -to Exit the application")
+        print ("Reply with: cc -to sign/Create an Account, EX -to Exit the application")
         print("*" * 50)
 
         while True:
             short_code = input().lower()
 
-            if short_code == "CC":
+            if short_code == "cc":
                 print("You are now creating an account on Password Locker...")
                 print("Key in the following details:")
                 print("Enter Username:.....")
                 username = input()
-
                 print("Enter your password:")
                 password = input()
 
+                save_user(create_user(first_name,last_name,number,password))
+                print('\n')
+                print(f"Your Account information is:")
+                print(f"Username: {username}, Password:{password}")
+                print("*" * 50)
 
         # while True:
         #             print("Use these short codes : cc - create a new contact into Password Locker, dc - display your credentials, fc -find a contact, ex -exit the contact list ")
@@ -152,4 +161,7 @@ def main():
                     # else:
                     #         print("I really didn't get that. Please use the short codes")
 
-main()
+            else:
+                print("Invalid, please  use these short codes : ca - create a new account, da - display accounts, fa -find an account, de- delete account , gp - generate a random password , ex -logout")
+
+main()  
