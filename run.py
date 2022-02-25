@@ -78,7 +78,7 @@ def main():
         print(f"Welcome {first_name} {last_name} of number {number}. Ensure you use {password} as your password to sign up to continue")
         print('\n')
         print("*" * 50)
-        print ("Reply with: cc -to Create logins for this Passlocker Account(Recommended), ca - To create new logins for your sub-accounts in the PassLocker account such as Instragram, EX -to Exit the application, ca - create a new credentials account, se - to store existing credentials in the application,  to view your various account credentials and their passwords in the application")
+        print ("Reply with: cc -to Create logins for this Passlocker Account(Recommended), ca - To create new logins for your sub-accounts in the PassLocker account such as Instragram, EX -to Exit the application, ca - create a new credentials account, se - to store existing credentials in the application,  to view your various account credentials and their passwords in the application, de  - To delete a a credentials account")
         print("*" * 50)
 
         while True:
@@ -155,7 +155,19 @@ def main():
                                     print("*" * 50)
                                     print("You dont seem to have all account credentials and their passwords to enable saving. Check if you inputted all the fields appropriately")
                                     print("*" * 50)
+           
+#Funtion to delete a credential's account that the user no longer needs in the applicatio
 
+
+            elif short_code == "de":
+                            print("Kindly note that an account deleted can NEVER be recovered!!")
+                            print("Enter the account login name you wish to delete:...")
+                            deleted_name = input()
+                            # print(f"{deleted_name} has been deleted")
+                            # if find_credential (deleted_name):
+                            #     del_credential = find_credential (deleted_name)
+                            print(f"The credentials {deleted_name} have been deleted")
+                            print("*" * 50)
 
         #  save_contacts(create_contact(f_name,l_name,p_number,e_address)) # create and save new contact.
                     #         print ('\n')
@@ -223,21 +235,14 @@ def main():
                     #         else:
                     #                 print("That contact does not exist")
 
-                    # elif short_code == "ex":
-                    #         print("Bye .......")
-                    #         break
-                    # else:
-                    #         print("I really didn't get that. Please use the short codes")
+            elif short_code == "ex":
+                            print("Bye, Hoping to see you next time")
+                           
+
 
             else:
                 print("Invalid, please  use these short codes : ca - create a new account, da - display accounts, fa -find an account, de- delete account , gp - generate a random password , ex -logout")
 
 main()  
 
-# create a password locker account with my details, a login username and password.///DONE
-# if I have not yet signed up for Instagram, I want to create new account credentials in the application///DONE
-# to store my already existing twitter username and password in the application.  ///DONE
-# have the option of putting in a password that I want to use for the new credential account //DONE
-#  instead of having the application generate a password for me////DONE
-# to view my various account credentials and their passwords in the application /////display_contacts():
-# to delete a credentials account that I no longer need in the application ////delete function
+
