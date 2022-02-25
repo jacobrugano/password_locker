@@ -46,11 +46,15 @@ def display_credential():
     return Credential.display_credential()
 
 def main():
-        print("Hello!! Welcome to Password Locker! Kindly enter your name to proceed:..")
+        print("Hello!! Welcome to Password Locker! Kindly enter your full names to proceed:..")
         user_name = input()
 
+        print("*" * 50)
         print(f"Hello {user_name}. Sign up to continue")
         print('\n')
-
-   
+        print("*" * 50)
+        print ("Reply with capital: CC -to sign/Create an Account, EX -to Exit the application")
+        print("*" * 50)
+        while True:
+                   
 main()
