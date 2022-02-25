@@ -19,12 +19,12 @@ class User:   #Class that generates new instances of contacts
     @classmethod
     def find_by_first_name(cls,first_name):
         '''
-        Method that takes in a number and returns a contact that matches that number.
+        Method that takes in the first_name and returns the first_name that matches that number.
 
         Args:
-            number: Phone number to search for
+            first_name: first name to search for
         Returns :
-            Contact of person that matches the number.
+            User of person that matches the first_name.
         '''
 
         for first_name in cls.user_list:

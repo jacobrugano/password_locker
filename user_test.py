@@ -52,16 +52,27 @@ class TestUser(unittest.TestCase):
             self.assertEqual(len(User.user_list),1)# to check if the length of our user_list is equal to the number of users saved.
 
 
-#To check if we can find the username entered using the account name and display this.
+#To check if we can find the account name entered using the account name and display this.
 def test_find_user_by_first_name(self):
         self.new_user.save_user()
         test_user = User("Test","user","0711223344") # new user details
         test_user.save_user()
         found_user = User.find_user_by_first_name("Test")
-
         self.assertEqual(found_user.first_name,test_user.first_name)
 
+# To check if the user details exists once entered
+def test_user_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the contact.
+        '''
+        self.new_user.save_user()
+        test_user = User("Test","user","0711223344","test@user.com") # new user
+        test_user.save_user()
 
+        user_exists = User.user_exist("0711223344")
+
+        self.assertTrue(user_exists)
+        
 
 if __name__ == '__main__':
     unittest.main()
