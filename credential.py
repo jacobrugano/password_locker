@@ -16,7 +16,7 @@ class Credential:   #Class that generates new instances of credentials
         Credential.credential_list.remove(self)
 
 
-    @classmethod #///////////////
+    @classmethod #///////////////1
     def find_by_username(cls,username):
         '''
         Method that takes in the username and returns a username that matches that name.
@@ -28,3 +28,11 @@ class Credential:   #Class that generates new instances of credentials
         for credential in cls.credential_list:
             if credential.username == username:
                 return credential
+
+    
+    @classmethod             #///////////////2
+    def display_credentials(cls):
+        '''
+        method that returns the credentials list
+        '''
+        return cls.credential_list

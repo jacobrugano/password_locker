@@ -62,7 +62,7 @@ def test_find_credential_by_username(self):   #//////////////////////
         self.assertEqual(found_credential.username,test_credential.username)
 
 #Test to check if the credentials actually exists.
-def test_credential_exists(self):     #//////////////////////
+def test_credential_exists(self):     #//////////////////////1
         '''
         test to check if we can return a Boolean  if we cannot find the credentials.
         '''
@@ -74,7 +74,7 @@ def test_credential_exists(self):     #//////////////////////
 
 
 # Test to check if we receive the list of the saved credentials.
-def test_display_all_credentials(self):    #//////////////////////
+def test_display_all_credentials(self):    #//////////////////////2
         '''
         method that returns a list of all credentials saved
         '''
