@@ -1,10 +1,10 @@
 class Credential:   #Class that generates new instances of credentials
     
     credential_list = [] #credential_list is a Class variables(variables that belong to the entire class and can be  accessed by all instances of the class. This user_list var will be used to store our created user objects
-    def __init__(self,username,password,number):
+    def __init__(self,user_name,pass_word,number):
                             #  __init__ method to create new instances of a class Credential and to allow us to pass in properties for the new object.
-        self.username = username
-        self.password = password
+        self.user_name = user_name
+        self.pass_word = pass_word
         self.phone_number = number
 
 
@@ -18,7 +18,7 @@ class Credential:   #Class that generates new instances of credentials
 
 
     @classmethod #///////////////1
-    def find_by_username(cls,username):
+    def find_by_user_name(cls,user_name):
         '''
         Method that takes in the username and returns a username that matches that name.
         Args:
@@ -27,7 +27,7 @@ class Credential:   #Class that generates new instances of credentials
             Credentials of person that matches the username.
         '''
         for credential in cls.credential_list:
-            if credential.username == username:
+            if credential.user_name == user_name:
                 return credential
 
     
