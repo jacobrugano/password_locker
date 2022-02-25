@@ -11,7 +11,7 @@
 
 ### Project setup instructions
      1) Open Terminal {Ctrl+Alt+T}
-     2) Go to Git clone https://github.com/jacobrugano/password-locker.git
+     2) Go to Git clone https://github.com/jacobrugano/password_locker.git
      3) Navigate to the folder using the Ubuntu Terminal
      4) cd into Password-Locker
      5) code . or atom . based on the text editor you have.
