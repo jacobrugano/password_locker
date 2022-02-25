@@ -52,14 +52,14 @@ class TestCredential(unittest.TestCase):
             self.assertEqual(len(Credential.credential_list),1)# to check if the length of our credential_list is equal to the number of credentials saved.
 
 
-# To check if we can find the username entered using the account name and display this.
-# def test_find_username_by_account(self):
-#         self.new_usser.save_user()
-#         test_user = User("Test","user","0711223344") # new user details
-#         test_user.save_user()
-#         found_user = User.find_by_username("0711223344")
+# To check if we can find a user object entered using the user name and display this.
+def test_find_credential_by_username(self):   #///
+        self.new_credential.save_credential()
+        test_credential = Credential("Jacob","3456788") # new user details
+        test_credential.save_credential()
+        found_credential = Credential.find_by_username("Jacob")
 
-#         self.assertEqual(found_user.username,test_user.username)
+        self.assertEqual(found_credential.username,test_credential.username)
 
 
 

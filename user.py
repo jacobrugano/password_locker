@@ -17,8 +17,6 @@ class User:   #Class that generates new instances of contacts
     def delete_user(self):
          User.user_list.remove(self)
 
-
-
     @classmethod  # ////////
     def find_by_number(cls,number):
         '''
@@ -44,7 +42,6 @@ class User:   #Class that generates new instances of contacts
         for user in cls.user_list:
             if user.phone_number == number:
                     return True
-
         return False
 
     @classmethod
