@@ -32,7 +32,7 @@ class Credential:   #Class that generates new instances of credentials
 
     
     @classmethod             #///////////////2
-    def display_credentials(cls):
+    def display_credential(cls):
         '''
         method that returns the credentials list
         '''

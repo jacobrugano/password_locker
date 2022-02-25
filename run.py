@@ -29,3 +29,18 @@ def find_credential(number):
     Function that finds a credentials by number and returns the credentials
     '''
     return Credential.find_by_number(number)
+
+# The function check_existing_credentials takes in a number as an argument and calls the class method credential_exist which returns a boolean.
+def check_existing_credential(number):
+    '''
+    Function that check if credentials exists with that number and return a Boolean
+    '''
+    return Credential.credential_exist(number)
+
+# We then create a function that displays all the credentials a user enters.
+
+def display_credential():
+    '''
+    Function that returns all the saved contacts
+    '''
+    return Credential.display_credential()
