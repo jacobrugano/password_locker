@@ -102,23 +102,48 @@ def main():
             elif short_code == 'ca':
                 print ("If you had not logged in to account eg Instagram, Enter the details you will be using:")
                 print("Username:")
-                user_name = input()
+                # user_name = input()
                 print("Password:")
-                pass_word = input()
+                # pass_word = input()
                 print("phone number:")
-                phone = input()
+                # phone = input()
                 print("email:")
-                email = input()
+                # email = input()
 
                 print("Type  yes  if you would like a generated password?")
                 if input() == "yes":
-                        print("dsxcvhjkouytredcvbjo09876543")
+                        print('\n')
+                        print("Your generated password is: dsxcvhjkouytredcvbjo09876543")
+                        print("*" * 50)
+                        print("Select   se  to proceed to saving your existing credentials")
                 else: 
-                        print("You have chosen    no   so we will use previously generated password")
-                        save_credential(create_credential(user_name, pass_word, phone, email))
-                        print("Confirm this are the right details that the application should save: username: {user_name}, password {pass_word}, phone number{phone}, email address {email}")
-                if input() == "yes":
-                        print("Your username, password, phone, email have been stored in the application")
+                        print("You have chosen    no   so we will use previously generated password.")
+                        print("*" * 50)
+                        print("Select   se  to proceed to saving your existing credentials")
+                        print("*" * 50)
+                        
+            elif short_code == 'se':
+                        print("*" * 50)
+                        print("Thank you for choosing this option. You will proceed to storing your logins in the application")
+                        print("*" * 50)
+                        print("Username:")
+                        user_name = input()
+                        print("Password:")
+                        pass_word = input()
+                        print("phone number:")
+                        phone = input()
+                        print("email:")
+                        email = input()
+                        
+                        save_credential(create_credential(user_name,pass_word,phone,email))   
+                        print(f"SAVED SUCCESSFULLY! This are the details that will be stored in the application: {user_name} {pass_word} {phone} {email}")
+       
+        #  save_contacts(create_contact(f_name,l_name,p_number,e_address)) # create and save new contact.
+                    #         print ('\n')
+                    #         print(f"New Contact {f_name} {l_name} created")
+                    #         print ('\n')
+
+
         #Now to the credentials account:
                 # print("Choose any of these options to proceed: ca - create a new credentials account, da - display accounts, fa -find an account, gp - generate a random password , ex -exit the contact list ")
                 # print("*" * 50)
