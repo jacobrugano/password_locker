@@ -78,7 +78,7 @@ def main():
         print(f"Welcome {first_name} {last_name} of number {number}. Ensure you use {password} as your password to sign up to continue")
         print('\n')
         print("*" * 50)
-        print ("Reply with: cc -to Create a passlocker Account, ca - create a new credentials account, EX -to Exit the application, ca - create a new credentials account")
+        print ("Reply with: cc -to Create logins for this Passlocker Account(Recommended), ca - To create new logins for your sub-accounts in the PassLocker account such as Instragram, EX -to Exit the application, ca - create a new credentials account, se - to store existing credentials in the application")
         print("*" * 50)
 
         while True:
@@ -110,12 +110,14 @@ def main():
                 print("email:")
                 email = input()
 
-                print("Would you like a generated password?")
+                print("Type  yes  if you would like a generated password?")
                 if input() == "yes":
-                    print("dsxcvhjkouytredcvbjo09876543")
-                    save_credential(create_credential(user_name, pass_word, phone, email))
-                    print("Confirm this are the right details that the application should save: username: {user_name}, password {pass_word}, phone number{phone}, email address {email}")
-                    if input() == "yes":
+                        print("dsxcvhjkouytredcvbjo09876543")
+                else: 
+                        print("You have chosen    no   so we will use previously generated password")
+                        save_credential(create_credential(user_name, pass_word, phone, email))
+                        print("Confirm this are the right details that the application should save: username: {user_name}, password {pass_word}, phone number{phone}, email address {email}")
+                if input() == "yes":
                         print("Your username, password, phone, email have been stored in the application")
         #Now to the credentials account:
                 # print("Choose any of these options to proceed: ca - create a new credentials account, da - display accounts, fa -find an account, gp - generate a random password , ex -exit the contact list ")
