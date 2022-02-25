@@ -1,10 +1,11 @@
 class User:   #Class that generates new instances of contacts
     
     user_list = [] #user_list is a Class variables(variables that belong to the entire class and can be  accessed by all instances of the class. This user_list var will be used to store our created user objects
-    def __init__(self,first_name,last_name,password):
+    def __init__(self,first_name,last_name,number,password):
                             #  __init__ method to create new instances of a class User and to allow us to pass in properties for the new object.
         self.first_name = first_name
         self.last_name = last_name
+        self.phone_number = number
         self.password = password
 
 
@@ -16,17 +17,39 @@ class User:   #Class that generates new instances of contacts
     def delete_user(self):
          User.user_list.remove(self)
 
-    @classmethod
-    def find_by_first_name(cls,first_name):
-        '''
-        Method that takes in the first_name and returns the first_name that matches that number.
 
+
+    @classmethod  # ////////
+    def find_by_number(cls,number):
+        '''
+        Method that takes in a number and returns a contact that matches that number.
         Args:
-            first_name: first name to search for
+            number: Phone number to search for
         Returns :
-            User of person that matches the first_name.
+            Contact of person that matches the number.
         '''
+        for user in cls.user_list:
+            if user.phone_number == number:
+                return user
 
-        for first_name in cls.user_list:
-            if first_name.first_name == first_name:
-                return first_name
+    @classmethod
+    def user_exist(cls,number):  
+        '''
+        Method that checks if the user exists from the user list.
+        Args:
+            number: Phone number to search if it exists
+        Returns :
+            Boolean: True or false depending if the user exists
+        '''
+        for user in cls.user_list:
+            if user.phone_number == number:
+                    return True
+
+        return False
+
+    @classmethod
+    def display_users(cls):
+        '''
+        method that returns the contact list
+        '''
+        return cls.user_list
